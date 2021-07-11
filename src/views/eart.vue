@@ -1,8 +1,21 @@
 <template>
   <div id="eart">
-    <div class="tool">
-      <Tool />
+    <!-- 左右两个大盒子容器 -->
+    <!-- 左边 -->
+    <div class="left-parent">
+      <!-- 上下两个子盒子  放组件 -->
+      <div class="top-child"><lh-table :title="titleData.diversity"/></div>
+      <div class="buttom-child"><lh-line :title="titleData.echart"/></div>
     </div>
+    <!-- 右边 -->
+    <div class="right-parent">
+      <!-- 上下两个子盒子  放组件 -->
+      <div class="top-child"><lh-table :title="titleData.protection"/></div>
+      <div class="buttom-child"><lh-imgCar :title="titleData.detal"/></div>
+    </div>
+    <!-- <div class="tool">
+      <Tool />
+    </div> -->
     <div id="cesiumContainer"></div>
   </div>
 </template>
@@ -10,6 +23,24 @@
 <script>
 import Tool from "../components/tool.vue";
 export default {
+  data(){
+    return{
+      titleData:{
+        diversity:{
+          title:"生物多样性名录"
+        },
+        protection:{
+          title:"保护名录",
+        },
+        echart:{
+          title:"分析图",
+        },
+        detal:{
+          title:"详情",
+        }
+      }
+    }
+  },
   components: {
     Tool,
   },
@@ -98,6 +129,28 @@ export default {
 </script>
 
 <style scoped>
+.left-parent,.right-parent{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 400px;
+  z-index: 1;
+}
+.left-parent{
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  bottom: 3%;
+}
+.right-parent{
+  top: 3%;
+  right: 3%;
+  bottom: 3%;
+}
+.top-child,.buttom-child{
+  flex: 1;
+}
 .tool {
   position: fixed;
   z-index: 1;

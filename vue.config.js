@@ -31,6 +31,13 @@ module.exports = {
         module: {
             unknownContextCritical: /^.\/.*$/,
             unknownContextCritical: false
-        }
+        },
+        // css: {
+        //     loaderOptions: {
+        //         sass: {
+        //             prependData: `@import "~@/assets/scss/style.scss";`
+        //         }
+        //     }
+        // }
     }
 }
