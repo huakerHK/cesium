@@ -1,19 +1,19 @@
 // 盒子属性
 .box{
-  width: 320px;
-  background: url("/img/newPro/liebiao_2.png");
+  width: 400px;
+  height: 400px;
+  background: url("/img/newPro/box_3.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 5px;
+  padding: 20px;
   
 }
 // 标题属性 
 .title{
   color: white;
-  size: 14px;
+  size: 18rem;
   font-weight: 900;
-  line-height: 30px;
-  background: url("/img/newPro/biaoti_2.png");
+  background: url("/img/newPro/titleTwo.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
